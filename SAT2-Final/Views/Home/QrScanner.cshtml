@@ -1,0 +1,46 @@
+﻿@{
+    ViewData["Title"] = "QR İstasyonu";
+}
+
+<div class="row" id="qr-workspace">
+    <div class="col-12 text-center mb-4">
+        <h2 class="fw-bold">Karekod İstasyonu</h2>
+        <p class="text-muted">Metinlerden QR kod üretin veya kameranızla mevcut barkodları tarayın.</p>
+    </div>
+
+    <div class="col-md-6 mb-4">
+        <div class="card h-100 p-4 shadow-sm border-0">
+            <h4 class="text-primary mb-3"><i class="fas fa-qrcode"></i> QR Kod Üretici</h4>
+            <div class="form-group mb-3">
+                <label class="text-muted small mb-1">QR Koda Dönüştürülecek Metin veya Link:</label>
+                <textarea id="qrTextInput" class="form-control" rows="3" placeholder="Link veya Metin girebilirsiniz..."></textarea>
+            </div>
+            <button id="generateQrBtn" class="btn btn-primary w-100 mb-4">Oluştur</button>
+
+            <div class="d-flex flex-column align-items-center">
+                <div id="qrCodeOutput" class="mb-3 p-3 bg-white border rounded" style="min-height: 200px; display: flex; align-items: center; justify-content: center;">
+                    <span class="text-muted small">QR Kod burada belirecek</span>
+                </div>
+                <button id="downloadQrBtn" class="btn btn-outline-success btn-sm w-50" style="display:none;"><i class="fas fa-download"></i> PNG Olarak İndir</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-6 mb-4">
+        <div class="card h-100 p-4 shadow-sm border-0">
+            <h4 class="text-warning mb-3"><i class="fas fa-camera"></i>QR Okuyucu</h4>
+
+            <div id="reader" width="100%"></div>
+
+            <div class="mt-4">
+                <label class="text-muted small mb-1">Okunan Sonuç:</label>
+                <div class="alert alert-secondary" id="scanResult">
+                    Henüz bir tarama yapılmadı.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script src="https://unpkg.com/html5-qrcode" type="text/javascript"></script>

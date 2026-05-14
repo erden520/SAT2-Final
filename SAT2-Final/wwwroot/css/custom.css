@@ -1,0 +1,224 @@
+﻿/* --- Yüz Tanıma Modülü Stilleri --- */
+.upload-box {
+    background-color: #ffffff;
+    border: 2px dashed #bdc3c7;
+    padding: 30px;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+    .upload-box:hover {
+        border-color: #3498db;
+        background-color: #f8fafc;
+    }
+
+.cropped-face-card {
+    background: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 150px;
+}
+
+    .cropped-face-card img {
+        width: 100%;
+        height: auto;
+        border-radius: 6px;
+        margin-bottom: 10px;
+    }
+
+
+
+/* --- QR & Barkod Modülü Stilleri --- */
+#qrCodeOutput img {
+    max-width: 100%;
+    height: auto;
+}
+
+#reader {
+    border-radius: 8px;
+    overflow: hidden;
+    border: 2px solid #e2e8f0;
+}
+
+    #reader button {
+        background-color: #38bdf8;
+        color: #0f172a;
+        border: none;
+        padding: 8px 16px;
+        border-radius: 6px;
+        font-weight: bold;
+        cursor: pointer;
+        margin: 5px;
+    }
+
+
+
+/* --- Medya Kaydedici Stilleri --- */
+#screenPreview {
+    width: 100%;
+    height: 200px;
+    background-color: #1e293b;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.recording-badge {
+    font-weight: bold;
+    color: #ef4444;
+    margin-top: 10px;
+}
+
+.recording-pulse {
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.2;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+
+/* --- Veri Tablosu Stilleri --- */
+.dt-buttons .btn {
+    margin-right: 8px;
+    border-radius: 6px;
+}
+
+.dataTables_filter input {
+    border-radius: 6px;
+    border: 1px solid #cbd5e1;
+    padding: 4px 12px;
+    margin-left: 8px;
+    outline: none;
+}
+
+    .dataTables_filter input:focus {
+        border-color: #38bdf8;
+        box-shadow: 0 0 0 0.2rem rgba(56,189,248,.25);
+    }
+
+
+
+/* --- Video Editör Stilleri --- */
+#outputContainer {
+    transition: all 0.3s ease;
+}
+
+#outputVideo, #outputGif {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+    background-color: #000;
+}
+
+
+
+#calendar-workspace .card {
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+    padding: 25px;
+}
+
+#calendar {
+    max-width: 100%;
+    margin: 0 auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.fc-theme-standard td, .fc-theme-standard th {
+    border-color: #f1f5f9;
+}
+
+.fc-theme-standard .fc-scrollgrid {
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.fc-header-toolbar {
+    margin-bottom: 2rem !important;
+}
+
+.fc-toolbar-title {
+    font-size: 1.4rem !important;
+    font-weight: 800;
+    color: #1e293b;
+    letter-spacing: 0.5px;
+}
+
+.fc-button-primary {
+    background-color: #f8fafc !important;
+    border: 1px solid #cbd5e1 !important;
+    color: #475569 !important;
+    border-radius: 8px !important;
+    box-shadow: none !important;
+    text-transform: capitalize;
+    font-weight: 600 !important;
+    padding: 8px 16px !important;
+    transition: all 0.2s ease-in-out;
+}
+
+    .fc-button-primary:hover {
+        background-color: #e2e8f0 !important;
+        color: #0f172a !important;
+    }
+
+    .fc-button-active, .fc-button-primary:active {
+        background-color: #3b82f6 !important;
+        color: white !important;
+        border-color: #3b82f6 !important;
+        box-shadow: 0 4px 10px rgba(59, 130, 246, 0.3) !important;
+    }
+
+.fc-col-header-cell {
+    background-color: #f8fafc;
+    padding: 12px 0 !important;
+}
+
+.fc-col-header-cell-cushion {
+    color: #64748b;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+}
+
+.fc-day-today {
+    background-color: #f0fdf4 !important;
+}
+
+.fc-event {
+    border-radius: 6px;
+    border: none;
+    background: linear-gradient(135deg, #38bdf8 0%, #0284c7 100%);
+    box-shadow: 0 2px 5px rgba(2, 132, 199, 0.2);
+    padding: 4px 8px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: white !important;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    margin-bottom: 2px;
+}
+
+    .fc-event:hover {
+        transform: translateY(-2px) scale(1.02);
+        box-shadow: 0 4px 8px rgba(2, 132, 199, 0.4);
+        z-index: 5;
+    }
+
+.fc-event-main {
+    color: #ffffff !important;
+}

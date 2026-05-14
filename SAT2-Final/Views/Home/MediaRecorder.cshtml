@@ -1,0 +1,51 @@
+﻿@{
+    ViewData["Title"] = "Medya Kaydedici";
+}
+
+<div class="row" id="media-workspace">
+    <div class="col-12 text-center mb-4">
+        <h2 class="fw-bold">Ekran ve Ses Kaydedici</h2>
+        <p class="text-muted">Tarayıcı üzerinden ekranınızı veya sesinizi kaydedin, anında indirin.</p>
+    </div>
+
+    <div class="col-md-6 mb-4">
+        <div class="card h-100 p-4 shadow-sm border-0 text-center">
+            <h4 class="text-danger mb-3"><i class="fas fa-desktop"></i> Ekran Kaydedici</h4>
+
+            <div class="video-container mb-3">
+                <video id="screenPreview" autoplay muted playsinline></video>
+                <div id="screenRecordingIndicator" class="recording-badge" style="display:none;">
+                    <i class="fas fa-circle text-danger recording-pulse"></i> Kaydediliyor...
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-center gap-2 mt-3">
+                <button id="btnStartScreen" class="btn btn-outline-danger"><i class="fas fa-play"></i> Kayda Başla</button>
+                <button id="btnStopScreen" class="btn btn-danger" disabled><i class="fas fa-stop"></i> Bitir</button>
+                <button id="btnDownloadScreen" class="btn btn-success" style="display:none;"><i class="fas fa-download"></i> İndir</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-6 mb-4">
+        <div class="card h-100 p-4 shadow-sm border-0 text-center">
+            <h4 class="text-info mb-3"><i class="fas fa-microphone"></i> Ses Kaydedici</h4>
+
+            <div class="audio-container mb-4 d-flex flex-column align-items-center justify-content-center" style="min-height: 200px; background: #f8fafc; border-radius: 8px;">
+                <i class="fas fa-microphone-alt fa-4x text-info mb-3" id="audioIcon"></i>
+                <audio id="audioPreview" controls style="display:none; width: 100%;"></audio>
+                <div id="audioRecordingIndicator" class="recording-badge mt-2" style="display:none;">
+                    <i class="fas fa-circle text-danger recording-pulse"></i> Ses Kaydediliyor...
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-center gap-2">
+                <button id="btnStartAudio" class="btn btn-outline-info"><i class="fas fa-microphone"></i> Kayda Başla</button>
+                <button id="btnStopAudio" class="btn btn-info text-white" disabled><i class="fas fa-stop"></i> Bitir</button>
+                <button id="btnDownloadAudio" class="btn btn-success" style="display:none;"><i class="fas fa-download"></i> İndir</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.webrtc-experiment.com/RecordRTC.js"></script>
